@@ -113,12 +113,12 @@
       {%- endif -%}
       {%- if site.dob -%}
         <p>
-          {{ site.dob | escape }}
+          DOB: {{ site.dob | escape }}
         </p>
       {%- endif -%}  
       {%- if site.location -%}
         <p>
-          LOC:{{ site.location | escape }}
+          {{ site.location | escape }}
         </p>
       {%- endif -%}
       {%- if site.email -%}

@@ -3,7 +3,6 @@
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
       <h1>{{ site.name | escape }}</h1>
       <h2>{{ site.title | escape }}</h2>
-      <h2>{{ site.location | escape }}</h2>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
       <ul class="icons no-print">
@@ -107,6 +106,10 @@
         {% endfor %}
       </ul>
 
+      {%- if site.location -%}
+        <p>
+          {{ site.location | default: "Email" }}: <h2>{{ site.location | escape }}</h2>
+        </p>      
       {%- if site.email -%}
         <p>
           {{ site.email_title | default: "Email" }}: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>

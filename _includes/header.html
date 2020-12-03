@@ -108,8 +108,8 @@
 
       {%- if site.location -%}
         <p>
-          {{ site.location | default: "Email" }}: <h2>{{ site.location | escape }}</h2>
-        </p>      
+          {{ site.location | escape }}
+        </p>
       {%- endif -%}
       {%- if site.email -%}
         <p>

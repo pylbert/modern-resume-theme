@@ -106,14 +106,14 @@
         {% endfor %}
       </ul>
 
-      {%- if site.dob -%}
+      {%- if site.status -%}
         <p>
-          Family Status: {{ site.family | escape }}
+          {{ site.status | "Family Status }}: {{site.family | escape}}
         </p>
       {%- endif -%}
       {%- if site.dob -%}
         <p>
-          DOB: {{ site.dob | escape }}
+          {{ site.dob | escape }}
         </p>
       {%- endif -%}  
       {%- if site.location -%}

@@ -110,6 +110,7 @@
         <p>
           {{ site.location | default: "Email" }}: <h2>{{ site.location | escape }}</h2>
         </p>      
+      {%- endif -%}
       {%- if site.email -%}
         <p>
           {{ site.email_title | default: "Email" }}: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
